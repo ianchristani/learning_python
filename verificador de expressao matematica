@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Jan 30 19:56:00 2020
+
+@author: ian
+"""
+
+#desafio consiste em digitar uma expressao matematica usando parenteses e dizer se a expressao esta certa ou nao
+
+cont=cont1=cont2=0
+lista=[]
+exp=input('digite a expressao: ')
+tam=len(exp)
+while cont<tam:
+    exp1=exp[cont]
+    lista.append(exp1)
+    cont=cont+1
+for carac in lista:
+    if carac=='(':
+        cont1=+1
+    if carac==')':
+        cont2=+1
+if cont1==cont2:
+    print('td ok com a expressao')
+else:
+    print('expressao com problema')
